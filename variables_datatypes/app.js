@@ -9,11 +9,9 @@
  * const variableName = value; //immutable
  */
 
-// Task 1.4
+// Task 1.5
 
-const name = prompt("Sisestage oma nimi: ");
-const allowedSpeed = Number(prompt("Sisestage lubatud kiirus: "));
-const actualSpeed = Number(prompt("Sisestage tegelik kiirus: "));
-let fine = Math.min(190, (actualSpeed - allowedSpeed) * 3);
-fine = Math.max(0, fine);
-console.log(name + ", kiiruse ületamise eest on teie trahv " + String(fine) + " eurot.");
+const apCount = Number(prompt("Sisestage ainepunktide arv: "));
+const weekCount = Number(prompt("Sisestage nädalate arv: "));
+const totalTime = Math.round(apCount * 26 / weekCount);
+console.log(totalTime);
