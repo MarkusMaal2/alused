@@ -9,9 +9,25 @@
  * const variableName = value; //immutable
  */
 
-// Task 1.5
+// Task 1.6
 
-const apCount = Number(prompt("Sisestage ainepunktide arv: "));
-const weekCount = Number(prompt("Sisestage nädalate arv: "));
-const totalTime = Math.round(apCount * 26 / weekCount);
-console.log(totalTime);
+// Number of people and seats per bus
+const humanCount = 70;
+const busSeats = 24;
+
+// Number of buses (Math.floor function rounds down the division)
+const busCount = Math.floor(humanCount / busSeats);
+
+// The number of travellers, who were not able to make it into the bus
+const abandonedCount = humanCount % busSeats;
+
+// The number of travellers, who were able to make it into the bus
+const travellingCount = humanCount - abandonedCount;
+
+// Output the results
+console.log("Kokku on " + humanCount + " reisjat.");
+console.log("Ühes bussis on " + busSeats + " kohta.");
+console.log("Kokku saabus " + busCount + " bussi.");
+console.log("Bussidesse mahtus " + travellingCount + " inimest.");
+console.log("Bussidest jäi maha " + abandonedCount + " inimest.");
+
