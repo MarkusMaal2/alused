@@ -9,8 +9,8 @@
  * const variableName = value; //immutable
  */
 
-const aasta = 2021;
-const president = "Alar Karis";
-const lause_keskosa = ". aastal valiti Eesti presidendiks";
-const lause = String(aasta) + lause_keskosa + " " + president;
-console.log(lause);
+// Task 1.3
+
+const base = Number(prompt("Sisestage astme alus: "));
+const power = Number(prompt("Sisestage astendaja: "));
+console.log(base ** power);
