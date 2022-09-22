@@ -1,37 +1,19 @@
-// loogilised op
-// AND - &
-// OR - ||
 
-// 2.3 Pulss
+// 2.4 Istekoht
 
-// Küsi andmed
-let vanus = Number(prompt("Sisestage enda vanus: "))
-let sugu = prompt("Sisestage enda sugu: ")
-let treening = Number(prompt("Sisestage treeningu tüüp: "))
-
-// Arvuta maksimaalne pulss olenevalt soost ja vanusest
-let maxPulss = 0
-if ((sugu === "M") || (sugu === "m")) {
-    maxPulss = 220 - vanus
-} else if ((sugu === "N") || (sugu === "n")) {
-    maxPulss = 206 - 0.88 * vanus
+let soov = prompt("Kas soovite istekohta ise valida (\"ise\") või loosida (\"loos\")? ")
+if (soov === "ise") {
+    let valik = prompt("Kas soovite istuda akna ääres (\"aken\") või mitte (\"muu\")? ")
+    if (valik === "aken") {
+        console.log("Valisite isa. Aknakoht.")
+    } else if (valik === "muu") {
+        console.log("Valisite ise. Vahekäigukoht.")
+    }
+} else if (soov === "loos") {
+    let loos = Math.ceil(Math.random() * 3)
+    if (loos === 3) {
+        console.log("Istekoht loositi. Aknakoht.")
+    } else {
+        console.log("Istekoht loositi. Vahekäigukoht.")
+    }
 }
-
-// Arvuta treeningule vastav pulss
-let maxTreeninguPulss = 0;
-let minTreeninguPulss = 0;
-if (treening === 1) {
-    minTreeninguPulss = 0.5 * maxPulss
-    maxTreeninguPulss = 0.7 * maxPulss
-} else if (treening === 2) {
-    minTreeninguPulss = 0.7 * maxPulss
-    maxTreeninguPulss = 0.8 * maxPulss
-} else if (treening === 3) {
-    minTreeninguPulss = 0.8 * maxPulss
-    maxTreeninguPulss = 0.87 * maxPulss
-}
-
-// Väljasta tulemus
-minTreeninguPulss = Math.round(minTreeninguPulss)
-maxTreeninguPulss = Math.round(maxTreeninguPulss)
-console.log(`Pulsisagedus peaks olema vahemikus ${minTreeninguPulss} kuni ${maxTreeninguPulss}`)
