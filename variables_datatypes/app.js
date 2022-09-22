@@ -32,4 +32,6 @@ if (treening === 1) {
 }
 
 // Väljasta tulemus
-console.log("Pulsisagedus peaks olema vahemikus " + Math.round(minTreeninguPulss) + " kuni " + Math.round(maxTreeninguPulss))
+minTreeninguPulss = Math.round(minTreeninguPulss)
+maxTreeninguPulss = Math.round(maxTreeninguPulss)
+console.log(`Pulsisagedus peaks olema vahemikus ${minTreeninguPulss} kuni ${maxTreeninguPulss}`)
