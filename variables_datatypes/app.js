@@ -1,19 +1,10 @@
+// 2.5 Spämm
 
-// 2.4 Istekoht
-
-let soov = prompt("Kas soovite istekohta ise valida (\"ise\") või loosida (\"loos\")? ")
-if (soov === "ise") {
-    let valik = prompt("Kas soovite istuda akna ääres (\"aken\") või mitte (\"muu\")? ")
-    if (valik === "aken") {
-        console.log("Valisite isa. Aknakoht.")
-    } else if (valik === "muu") {
-        console.log("Valisite ise. Vahekäigukoht.")
-    }
-} else if (soov === "loos") {
-    let loos = Math.ceil(Math.random() * 3)
-    if (loos === 3) {
-        console.log("Istekoht loositi. Aknakoht.")
-    } else {
-        console.log("Istekoht loositi. Vahekäigukoht.")
-    }
+suurus = Number(prompt("Sisestage kirja suurus: "))
+teema = prompt("Sisestage kirja teema pealkiri: ")
+kaasasfail = prompt("Kas kirjaga on kaasas fail? ")
+if (((kaasasfail === "jah") && suurus > 1) || (teema === "")) {
+    console.log("Kiri on spämm");
+} else {
+    console.log("Kiri ei ole spämm");
 }
