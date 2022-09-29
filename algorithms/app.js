@@ -1,10 +1,9 @@
-// 3.2 Jänesevanemate mure
-lapCount = Number(prompt("Sisesta ringide arv: "))
-carrots = 0;
-increment = 2;
-for (let l = 0; l < lapCount - 1; l += 2) {
-    carrots += increment;
-    console.log("+" + increment)
-    increment += 2;
+// 3.3 Täringumäng
+const diceSides = 6
+let diceCount = Number(prompt("Täringute arv: "))
+let turn = 0
+while (turn < diceCount) {
+    let diceValue = Math.floor(Math.random() * diceSides + 1)
+    console.log(diceValue)
+    turn++
 }
-console.log("Porgandite koguarv on " + carrots + ".")
